@@ -33,7 +33,16 @@ function App() {
             Vite Docs
           </a>
         </p>
-        <Button shape="round" onClick={() => console.log("IM CLICKED")}>
+        <Button
+          shape="round"
+          onClick={() =>
+            navigator.share({
+              title: "test",
+              text: "blah",
+              url: window.location.host,
+            })
+          }
+        >
           CHECK
         </Button>
       </header>
